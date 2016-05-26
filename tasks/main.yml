@@ -1,0 +1,9 @@
+---
+
+- name: Update apt cache
+  apt: update_cache=yes
+  become: yes
+
+- name: Install Java package
+  apt: name=openjdk-7-jdk state=latest
+  become: yes
